@@ -1,0 +1,695 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f8faf9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #009c4d;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007a3d;
+}
+
+/* Barra GOV.CO */
+.gov-bar {
+    background-color: #0460bb;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gov-co-image {
+    height: 24px;
+}
+
+/* Encabezado principal */
+.main-header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar i {
+    font-size: 2rem;
+    color: #009c4d;
+    transition: transform 0.3s ease;
+}
+
+.user-avatar i:hover {
+    transform: scale(1.1);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #00613c;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+    color: #b91c1c;
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 98px;
+    bottom: 0;
+    width: 250px;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.sidebar-header .user-avatar i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #009c4d;
+}
+
+.sidebar-header .user-name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #00613c;
+}
+
+.sidebar-header .user-role {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 5px;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #4b5563;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sidebar-nav li a:hover {
+    background-color: #f0f8f4;
+    color: #009c4d;
+    padding-left: 25px;
+}
+
+.sidebar-nav li.active a {
+    background-color: #e6f5ee;
+    color: #009c4d;
+    border-left: 4px solid #009c4d;
+    font-weight: 500;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Contenedor principal */
+.dashboard-container {
+    margin-left: 250px;
+    padding: 25px;
+    min-height: calc(100vh - 138px);
+    transition: margin-left 0.3s ease;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #009c4d;
+}
+
+.welcome-section h1 {
+    color: #00613c;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.welcome-message {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Alertas */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-left: 4px solid #b91c1c;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    color: #166534;
+    border-left: 4px solid #166534;
+}
+
+/* Sección de citas */
+.appointment-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-section h2 {
+    color: #00613c;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.appointment-section h2 i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.appointment-card {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #009c4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+}
+
+.appointment-date,
+.appointment-time,
+.appointment-doctor,
+.appointment-specialty,
+.appointment-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.appointment-date i,
+.appointment-time i,
+.appointment-doctor i,
+.appointment-specialty i,
+.appointment-status i {
+    color: #009c4d;
+    font-size: 1.1rem;
+}
+
+.appointment-status.pendiente {
+    color: #d97706;
+}
+
+.appointment-status.confirmada {
+    color: #166534;
+}
+
+.appointment-status.cancelada {
+    color: #b91c1c;
+}
+
+.appointment-status.completada {
+    color: #009c4d;
+}
+
+.appointment-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.empty-card {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.view-all-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.link-view-all {
+    color: #009c4d;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.link-view-all i {
+    transition: transform 0.3s ease;
+}
+
+.link-view-all:hover i {
+    transform: translateX(3px);
+}
+
+/* Sección de información del paciente */
+.patient-info-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.section-header h2 {
+    color: #00613c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.section-header h2 i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    padding: 15px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-item.full-width {
+    grid-column: span 2;
+}
+
+.info-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.info-label i {
+    font-size: 1rem;
+    color: #009c4d;
+}
+
+.info-value {
+    color: #1f2937;
+    font-size: 1rem;
+    padding-left: 25px;
+}
+
+/* Formulario de edición */
+.edit-form {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+.form-group label i {
+    color: #009c4d;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #009c4d;
+    box-shadow: 0 0 0 3px rgba(0, 156, 77, 0.1);
+}
+
+.form-group input[disabled] {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.btn i {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #009c4d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #007a3d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 156, 77, 0.2);
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(107, 114, 128, 0.2);
+}
+
+.btn-edit {
+    background-color: #34c476;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #2aa25e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 196, 118, 0.2);
+}
+
+/* Pie de página */
+.main-footer {
+    background-color: #00613c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-left: 250px;
+    font-size: 0.9rem;
+    transition: margin-left 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item.full-width {
+        grid-column: span 1;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        overflow: hidden;
+    }
+    
+    .sidebar-nav li a span {
+        display: none;
+    }
+    
+    .sidebar-nav li a i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+    
+    .dashboard-container, 
+    .main-footer {
+        margin-left: 80px;
+    }
+    
+    .appointment-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .appointment-actions {
+        justify-content: center;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-info {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    
+    .user-details {
+        align-items: flex-end;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.appointment-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.appointment-actions .btn {
+    flex: 0 0 auto;
+}
+
+/* Estilo para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float i {
+    margin-top: 4px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    text-decoration: none;
+    color: white;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}

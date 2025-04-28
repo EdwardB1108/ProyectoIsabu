@@ -1,0 +1,405 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #306b34;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado GOV.CO */
+  .gov-bar {
+    background-color: #025dc3;
+    padding: 10px 20px;
+    text-align: right;
+  }
+  
+  .gov-co-image {
+    height: 40px;
+  }
+  
+  /* Encabezado principal */
+  .main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo-container {
+    text-align: center;
+  }
+  
+  .logo {
+    max-height: 80px;
+  }
+  
+  /* Contenedor de login */
+  .login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .login-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  
+  .login-options {
+    display: flex;
+  }
+  
+  .login-options button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .login-options button.active {
+    background: white;
+    font-weight: bold;
+    color: #306b34;
+  }
+  
+  /* Formularios */
+  .formulario__login,
+  .formulario__register {
+    padding: 30px;
+  }
+  
+  .formulario__login {
+    display: block;
+  }
+  
+  .formulario__register {
+    display: none;
+  }
+  
+  .formulario__login h2,
+  .formulario__register h2 {
+    color: #306b34;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .boton-container {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #306b34;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #254e2a;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #306b34;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #254e2a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-box {
+        margin: 20px;
+    }
+    
+    .login-options button {
+        padding: 12px;
+        font-size: 14px;
+    }
+  }
+  
+  /* Tabs/Formularios */
+  .tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .tab-btn.active {
+    background: white;
+    font-weight: bold;
+    color: #306b34;
+    border-bottom: 2px solid #306b34;
+  }
+  
+  .form-tab {
+    display: none;
+    padding: 30px;
+  }
+  
+  .form-tab.active {
+    display: block;
+  }
+  
+  
+  /* Estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #306b34;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado GOV.CO */
+  .gov-bar {
+    background-color: #025dc3;
+    padding: 10px 20px;
+    text-align: right;
+  }
+  
+  .gov-co-image {
+    height: 40px;
+  }
+  
+  /* Encabezado principal */
+  .main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo-container {
+    text-align: center;
+  }
+  
+  .logo {
+    max-height: 80px;
+  }
+  
+  /* Contenedor de login */
+  .login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .login-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  
+  /* Tabs/Formularios */
+  .tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .tab-btn.active {
+    background: white;
+    font-weight: bold;
+    color: #306b34;
+    border-bottom: 2px solid #306b34;
+  }
+  
+  /* Formularios */
+  .form-tab {
+    display: none;
+    padding: 30px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .form-tab.active {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .form-tab h2 {
+    color: #306b34;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+  }
+  
+  .boton-container {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #306b34;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #254e2a;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #306b34;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mensajes de error */
+  .error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .success-message {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #254e2a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-box {
+        margin: 20px;
+    }
+    
+    .tab-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+  } 
+.tab-buttons a.tab-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mantener el estilo activo en el botón de login */
+.tab-buttons button.tab-btn.active {
+    background: white;
+    font-weight: bold;
+    color: #306b34;
+    border-bottom: 2px solid #306b34;
+}
